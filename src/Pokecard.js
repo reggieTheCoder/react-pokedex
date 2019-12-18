@@ -1,5 +1,4 @@
 import React from 'react';
-import data from './data';
 import './Pokecard.css';
 
 const POKE_API = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
@@ -12,7 +11,7 @@ function Pokecard(cards) {
             <h1 className='card-name'>{cards.name}</h1>  
             <img className='card-img' src={imgSrc} alt ={cards.name} />
             <p className='card-type'>Type: {cards.type}</p>
-            <p className ='card-exp'>EXP: {cards.base_experience}</p>
+            <p className ='card-exp'>Exp: {cards.base_experience}</p>
              
     
          </div>
