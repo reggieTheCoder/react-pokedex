@@ -12,10 +12,10 @@ function Pokecard(cards) {
     let imgSrc=`${POKE_API}${cards.id}.png`;
     return (
         <div className = "Pokecard">
-                <h1>{cards.name}</h1>
+                <h1 className-Pokecard-title>{cards.name}</h1>
                 <img src={imgSrc} alt={cards.name} />
-                <div>Type: {cards.type}</div>
-                <div>Exp: {cards.base_experience}</div>   
+                <div className='Pokecard-data'>Type: {cards.type}</div>
+                <div className='Pokecard-data'>Exp: {cards.base_experience}</div>   
             </div>
     );
 }
