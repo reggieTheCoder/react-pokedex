@@ -13,27 +13,22 @@ function Pokedex (pokemon) {
         {id: 39, name: 'Jigglypuff', type: 'normal', base_experience: 95},
         {id: 94, name: 'Gengar', type: 'poison', base_experience: 225},
         {id: 133, name: 'Eevee', type: 'normal', base_experience: 65},
-        {id: 28, name: 'Reggie', type: 'Awesome', base_experience: 1000},
-        {id: 19, name: 'Marcus', type: 'Baby Boy', base_experience: 900}
     ];
 
-   
     const cards = data;
     
-
    return (
        <div className='Pokedex'>
            <h1>Pokedex!</h1>
-           {
-               cards.map(card => <Pokecard 
-                id={card.id} 
-                name={card.name} 
-                type={card.type} 
-                base_experience = {card.base_experience}
-                 
-                />
-            )}
-             
+              <div className='Pokedex-cards'>
+                 {cards.map(card => <Pokecard 
+                    id={card.id} 
+                    name={card.name} 
+                    type={card.type} 
+                    base_experience = {card.base_experience}
+                  />
+            )} 
+             </div>      
        </div>
    );
 }
