@@ -1,9 +1,8 @@
 import React from 'react'
-import Pokecard from './Pokecard';
 import './Pokedex.css';
+import Pokedex from './Pokedex';
 
-
-function Pokedex (pokemon) {
+function Pokegame (pokemon) {
     const data = [
         {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
         {id: 7, name: 'Squirtle', type: 'water', base_experience: 63},
@@ -16,21 +15,26 @@ function Pokedex (pokemon) {
     ];
 
     const cards = data;
-    
-   return (
-       <div className='Pokedex'>
-           <h1>Pokedex!</h1>
-              <div className='Pokedex-cards'>
-                 {cards.map(card => <Pokecard 
-                    id={card.id} 
-                    name={card.name} 
-                    type={card.type} 
-                    base_experience = {card.base_experience}
-                  />
-            )} 
-             </div>      
-       </div>
-   );
-}
 
-export default Pokedex;
+    let hand1 = [];
+    let hand2 = [...cards];
+    while (hand1.length < hand2.length) {
+        let randIdx = Math.floor(Math.random() * hand2.length);
+        let randPokemon = hand2.splice(randIdx, 1)[0];
+        hand1.push(randPokemon);
+    }
+    console.log(hand1);
+    console.log(hand2);
+
+    return (
+        <div>
+            <Pokedex cards={hand1}/>
+            <Pokedex pokemon={hand2} />
+        
+          
+        </div>
+       );
+
+   } 
+
+   export default Pokegame;
