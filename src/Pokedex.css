@@ -3,3 +3,20 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.Pokedex{
+    text-align: center;
+}
+
+.Pokedex-winner{
+color: #007A33;
+}
+
+
+.Pokedex-loser{
+color: red;
+}
+
+.total-experience{
+color: white;
+}
